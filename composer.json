@@ -1,0 +1,68 @@
+{
+    "type": "project",
+    "license": "MIT",
+    "description": "",
+    "homepage": "https://#######.com/",
+    "authors": [
+        {
+            "name": "Carl",
+            "homepage": "https://github.com/weirdlooop"
+        }
+    ],
+    "keywords": [
+        "CMS",
+        "MVC",
+        "PHP"
+    ],
+    "support": {
+        "issues": "https://github.com/redditPHP/redditPHP/issues"
+    },
+    "repositories": [
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+        ]
+    },
+    "require": {
+        "php": ">=8.0",
+        "composer/installers": "^2.2",
+        "guzzlehttp/guzzle": "^7.5.1",
+        "oscarotero/env": "^2.1",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "laravel/pint": "^1.5",
+        "pestphp/pest": "^1.23.0",
+        "phpcompatibility/php-compatibility": "^9.3.5",
+        "roave/security-advisories": "dev-latest",
+        "squizlabs/php_codesniffer": "^3.7.2"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true,
+        "platform": {
+            "php": "8.0.27"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "installer-paths": {
+        }
+    },
+    "scripts": {
+        "lint": "phpcs",
+        "format": "pint",
+        "test": "pest"
+    }
+}
