@@ -1,6 +1,6 @@
 {
     "name": "redditphp/redditphp",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "description": "",
     "homepage": "https://example.com/",
