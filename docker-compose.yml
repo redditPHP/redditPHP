@@ -2,6 +2,8 @@ version: '3'
 services:
   framework.test:
     build: .docker
+    ports:
+      - '80:80'
     networks:
       - framework
     volumes:
