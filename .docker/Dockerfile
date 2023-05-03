@@ -7,8 +7,19 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
     && echo $TZ > /etc/timezone
 
 RUN apt-get update \
-    && apt-get install -y git unzip libcurl4-openssl-dev pkg-config libssl-dev \
+    && apt-get install -y --no-install-recommends \
+        build-essential \
+        ca-certificates \
+        cron \
+        git \
+        mariadb-client \
+        software-properties-common \
+        unzip \
+        wget \
     && a2enmod rewrite
+
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y --no-install-recommends nodejs
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
