@@ -3,7 +3,7 @@ services:
   framework.test:
     build: .docker
     volumes:
-      - '.:/var/www/html'
+      - '.:/usr/src/myapp'
     networks:
       - framework
     depends_on:
