@@ -2,16 +2,12 @@ version: '3'
 services:
   framework.test:
     build: .docker
-    ports:
-      - '80:80'
-      - '5173:5173'
     volumes:
       - '.:/var/www/html'
     networks:
       - framework
     depends_on:
       - mariadb
-      - mailpit
   mariadb:
     image: 'mariadb:10'
     ports:
@@ -21,13 +17,6 @@ services:
       MYSQL_ROOT_PASSWORD: "password"
     volumes:
       - './.docker/dbdata:/var/lib/mysql'
-    networks:
-      - framework
-  mailpit:
-    image: 'axllent/mailpit:latest'
-    ports:
-      - '1025:1025'
-      - '8025:8025'
     networks:
       - framework
 networks:
