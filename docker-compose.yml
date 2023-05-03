@@ -4,6 +4,8 @@ services:
     build: .docker
     networks:
       - framework
+    volumes:
+      - '.:/var/www/html'
     depends_on:
       - mariadb
   mariadb:
@@ -21,5 +23,5 @@ networks:
     framework:
         driver: bridge
 volumes:
-    db:
+    dbdata:
         driver: local
