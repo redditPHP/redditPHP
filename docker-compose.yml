@@ -2,8 +2,6 @@ version: '3'
 services:
   framework.test:
     build: .docker
-    volumes:
-      - '.:/usr/src/myapp'
     networks:
       - framework
     depends_on:
