@@ -24,7 +24,8 @@
 				"pflannery.vscode-versionlens",
 				"redhat.vscode-yaml",
 				"GitHub.vscode-pull-request-github",
-                "sonarsource.sonarlint-vscode"
+                "sonarsource.sonarlint-vscode",
+				"github.vscode-github-actions"
 			],
 			"settings": {}
 		}
