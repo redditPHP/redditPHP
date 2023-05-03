@@ -1,7 +1,7 @@
 version: '3'
 services:
   framework.test:
-    image: php:8.2-apache
+    build: .docker
     ports:
       - '80:80'
       - '5173:5173'
@@ -20,7 +20,7 @@ services:
       MYSQL_DATABASE: framework
       MYSQL_ROOT_PASSWORD: "password"
     volumes:
-      - './storage/db:/var/lib/mysql'
+      - './.docker/dbdata:/var/lib/mysql'
     networks:
       - framework
   mailpit:
