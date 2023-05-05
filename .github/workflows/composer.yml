@@ -1,21 +1,25 @@
-name: PHP Composer
+# Schema: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+# Action docs:
+  # https://github.com/actions/checkout
+  # https://github.com/actions/cache
+
+name: Composer Validation and Install
 
 on:
-  push:
-    branches: [ "dev", "staging", main ]
   pull_request:
-    branches: [ "dev" ]
+    branches: [ dev, staging, main ]
 
 permissions:
   contents: read
 
 jobs:
   build:
-
+    name: Test
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
