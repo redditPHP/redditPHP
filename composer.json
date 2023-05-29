@@ -46,7 +46,6 @@
             "pestphp/pest-plugin": true
         },
         "minimum-stability": "dev",
-        "optimize-autoloader": true,
         "prefer-stable": true,
         "sort-packages": true
     },
