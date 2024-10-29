@@ -2,35 +2,32 @@
     "name": "redditphp/redditphp",
     "type": "library",
     "license": "MIT",
-    "description": "",
-    "homepage": "https://example.com/",
+    "description": "This PHP framework's name is currently pending. That's all we know for now.",
+    "homepage": "https://github.com/redditPHP/redditPHP",
     "authors": [
         {
             "name": "Carl",
-            "homepage": "https://github.com/weirdlooop"
+            "homepage": "https://github.com/weirdlooop",
+            "role": "Developer"
+        },
+        {
+            "name": "Garrett W.",
+            "homepage": "https://github.com/garrettw",
+            "role": "Developer"
         }
     ],
     "keywords": [
-        "CMS",
-        "MVC",
-        "PHP"
+        "php",
+        "framework"
     ],
     "support": {
         "issues": "https://github.com/redditPHP/redditPHP/issues"
-    },
-    "repositories": [
-    ],
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/"
-        },
-        "files": [
-        ]
     },
     "require": {
         "php": ">=8.0",
         "composer/installers": "^2.2",
         "guzzlehttp/guzzle": "^7.5.1",
+        "league/route": "^5.1.2",
         "oscarotero/env": "^2.1",
         "vlucas/phpdotenv": "^5.5"
     },
@@ -43,27 +40,23 @@
         "squizlabs/php_codesniffer": "^3.7.2"
     },
     "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
         "allow-plugins": {
             "composer/installers": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "pestphp/pest-plugin": true
         },
-        "sort-packages": true,
-        "platform": {
-            "php": "8.0.27"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "extra": {
-        "installer-paths": {
-        }
+        "minimum-stability": "dev",
+        "prefer-stable": true,
+        "sort-packages": true
     },
     "scripts": {
         "lint": "phpcs",
         "format": "pint",
         "test": "pest"
+    },
+    "autoload": {
+        "psr-4": {
+            "RedditPhp\\": "src/"
+        }
     }
 }
